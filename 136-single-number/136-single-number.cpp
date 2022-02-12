@@ -2,32 +2,26 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         unordered_map<int,int> map1;
-        sort(nums.begin(),nums.end());
+        //sort(nums.begin(),nums.end());
         int temp=0;
-        if (nums.size()==1)
+        for(int i=0;i<nums.size();i++)
         {
-            return nums[0];
-        }
-        for (int i=0;i<nums.size()-1;i++)
-        {
-            if(nums[i]==nums[i+1])
+            if(map1.count(nums[i])>0)
             {
-                map1[nums[i]]=i;
-                  
-            }
-            else if(map1.count(nums[i])>0)
-            {
-                    if(i==nums.size()-2)
-                    {
-                        temp=nums[i+1];
-                        
-                    }
+                map1[nums[i]]=2;
             }
             else
             {
-                    temp=nums[i];
-                    return nums[i];   
+            map1[nums[i]]=1;
             }
+        }
+        for(int j=0;j<nums.size();j++)
+        {
+            if(map1[nums[j]]==1)
+            {
+                temp=nums[j];
+            }
+            
         }
     return temp;
     }
