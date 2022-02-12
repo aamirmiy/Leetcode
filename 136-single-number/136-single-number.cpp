@@ -2,7 +2,6 @@ class Solution {
 public:
     int singleNumber(vector<int>& nums) {
         unordered_map<int,int> map1;
-        //sort(nums.begin(),nums.end());
         int temp=0;
         for(int i=0;i<nums.size();i++)
         {
@@ -21,7 +20,6 @@ public:
             {
                 temp=nums[j];
             }
-            
         }
     return temp;
     }
