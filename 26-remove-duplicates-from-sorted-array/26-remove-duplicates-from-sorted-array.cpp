@@ -10,7 +10,7 @@ public:
                l++;
            }
        }
-       nums.erase(nums.begin()+l,nums.end());
-       return nums.size();
+       //nums.erase(nums.begin()+l,nums.end());
+       return l;
    }
 };
