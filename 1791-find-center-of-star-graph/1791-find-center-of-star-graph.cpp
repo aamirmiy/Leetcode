@@ -1,6 +1,9 @@
 class Solution {
 public:
     int findCenter(vector<vector<int>>& edges) {
+        //simplest solution would be to compare the edges to find the common node using
+        //if else statements.
+        
         //calculate adjacency list
         int ans;
         unordered_map<int, list<int>> adj;
