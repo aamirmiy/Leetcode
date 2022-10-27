@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-class Solution:
+class Solution: #dfs solution take -1 for left and 1 for right 
     def dfs(self, root, side):
         if root is None:
             return []
