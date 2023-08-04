@@ -144,7 +144,7 @@ Node* fktha(Node *root, int&k, int node)
         if(k<=0)
         {
             //lock the answer
-            k=INT_MAX;
+           k=INT_MAX;
             return root;
         }
         
